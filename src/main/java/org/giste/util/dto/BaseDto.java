@@ -3,32 +3,47 @@ package org.giste.util.dto;
 import java.io.Serializable;
 
 /**
- * Base DTO object form transfer values between client and server. It has the
- * following fields.
- * <ul>
- * <li>id: Unique identifier of club.
- * </ul>
+ * Base DTO object for transfer values between client and server. BaseDto has only 
+ * an identifier.
  * 
  * @author Giste
  */
-public class BaseDto implements Serializable {
+public abstract class BaseDto implements Serializable {
 
 	private static final long serialVersionUID = 3155521647879428294L;
 	
 	protected Long id = 0L;
 
+	/**
+	 * Constructs a new BaseDto with default identifier (defaults to 0L).
+	 */
 	public BaseDto() {
 
 	}
 
+	/**
+	 * Constructs a new BaseDto with an identifier.
+	 * 
+	 * @param id The identifier.
+	 */
 	public BaseDto(Long id) {
 		this.id = id;
 	}
 
+	/**
+	 * Gets the identifier of this DTO.
+	 * 
+	 * @return The identifier.
+	 */
 	public Long getId() {
 		return id;
 	}
 
+	/**
+	 * Sets the identifier of this DTO.
+	 * 
+	 * @param id The identifier.
+	 */
 	public void setId(Long id) {
 		this.id = id;
 	}
