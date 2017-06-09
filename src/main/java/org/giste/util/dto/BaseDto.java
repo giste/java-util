@@ -3,15 +3,15 @@ package org.giste.util.dto;
 import java.io.Serializable;
 
 /**
- * Base DTO object for transfer values between client and server. BaseDto has only 
- * an identifier.
+ * Base DTO object for transfer values between client and server. BaseDto has
+ * only an identifier.
  * 
  * @author Giste
  */
 public abstract class BaseDto implements Serializable {
 
 	private static final long serialVersionUID = 3155521647879428294L;
-	
+
 	protected Long id = 0L;
 
 	/**
